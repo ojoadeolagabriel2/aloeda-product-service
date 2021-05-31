@@ -1,4 +1,4 @@
-package com.aloeda.product.api.support;
+package com.aloeda.product.configuration;
 
 import io.micrometer.core.instrument.MeterRegistry;
 import lombok.extern.slf4j.Slf4j;
