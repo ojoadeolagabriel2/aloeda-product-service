@@ -30,4 +30,3 @@ docker push "${IMAGE_NAME}:latest"
 
 # cleanup
 mvn clean
-docker system prune -af

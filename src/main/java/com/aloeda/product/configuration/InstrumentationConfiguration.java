@@ -10,10 +10,12 @@ import org.springframework.context.annotation.Configuration;
 @Slf4j
 @Configuration
 public class InstrumentationConfiguration {
+
     @Bean
-    MeterRegistryCustomizer<MeterRegistry> metricsCommonTags(@Value("${spring.application.name}")String appName) {
+    MeterRegistryCustomizer<MeterRegistry> metricsCommonTags(@Value("${spring.application.name}") String appName) {
         return registry -> registry
                 .config()
+                .onMeterAdded(meter -> log.info("added meter {}", meter.getId().getName()))
                 .commonTags("application", appName);
     }
 }
