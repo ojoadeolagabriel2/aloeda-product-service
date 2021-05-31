@@ -34,7 +34,7 @@
         <appender-ref ref="Console" />
     </root>
 
-    <logger name="com.aloeda.product.service.Application" level="info" additivity="false">
+    <logger name="com.aloeda.product.Application" level="info" additivity="false">
         <appender-ref ref="RollingFile" />
         <appender-ref ref="Console" />
     </logger>

@@ -1,0 +1,21 @@
+server:
+  port: 50003
+
+spring:
+  banner:
+    image:
+      location: "classpath:banner.txt"
+  application:
+    name: "aloeda-product-service"
+
+management:
+  endpoint:
+    health:
+      group:
+        readiness:
+          include: "*"
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      base-path: ${ENV_MONITORING_PATH:/}

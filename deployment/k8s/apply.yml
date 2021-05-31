@@ -43,13 +43,13 @@ spec:
             httpGet:
               path: /health
               port: 12345
-            initialDelaySeconds: 30
+            initialDelaySeconds: 20
             periodSeconds: 10
           readinessProbe:
             httpGet:
               path: /health
               port: 12345
-            initialDelaySeconds: 30
+            initialDelaySeconds: 20
             periodSeconds: 10
           ports:
             - containerPort: 12345
